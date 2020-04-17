@@ -26,3 +26,6 @@ sed -i 's/OpenWrt/XiaoYu-C3/g' package/base-files/files/bin/config_generate
 [ -z $(grep "CONFIG_KERNEL_BUILD_DOMAIN=" .config) ] &&
     echo 'CONFIG_KERNEL_BUILD_DOMAIN="GitHub Actions"' >>.config ||
     sed -i 's@\(CONFIG_KERNEL_BUILD_DOMAIN=\).*@\1$"GitHub Actions"@' .config
+
+# add ssr plus+
+git clone https://github.com/fw876/helloworld.git package/helloworld

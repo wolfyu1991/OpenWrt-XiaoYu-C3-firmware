@@ -12,7 +12,7 @@ sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 sed -i 's/OpenWrt/XY-C3/g' package/base-files/files/bin/config_generate
 
 # Modify model
-cat xy-c3.mk >> target/linux/ramips/image/mt7621.mk
+cat ../xy-c3.mk >> target/linux/ramips/image/mt7621.mk
 cp -f ../mt7621_xiaoyu_xy-c3.dts target/linux/ramips/dts/
 sed -i 's/xy-c5/xy-c3/g' target/linux/ramips/mt7621/base-files/etc/board.d/02_network
 

@@ -41,4 +41,4 @@ git clone https://github.com/fw876/helloworld.git package/helloworld
 # add OpenAppFilter
 git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # add serverchan
-git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
+# git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan

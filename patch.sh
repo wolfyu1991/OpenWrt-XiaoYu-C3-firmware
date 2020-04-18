@@ -9,10 +9,10 @@
 sed -i 's/192.168.1.1/10.0.0.1/g' package/base-files/files/bin/config_generate
 
 # Modify hostname
-sed -i 's/OpenWrt/XiaoYu-C3/g' package/base-files/files/bin/config_generate
+sed -i 's/OpenWrt/XY-C3/g' package/base-files/files/bin/config_generate
 
 # Modify the version number
-# sed -i "s/OpenWrt /wolfyu build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
+sed -i "s/OpenWrt /wolfyu build $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" package/lean/default-settings/files/zzz-default-settings
 
 # Modify default theme
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
@@ -26,6 +26,14 @@ sed -i 's/OpenWrt/XiaoYu-C3/g' package/base-files/files/bin/config_generate
 [ -z $(grep "CONFIG_KERNEL_BUILD_DOMAIN=" .config) ] &&
     echo 'CONFIG_KERNEL_BUILD_DOMAIN="GitHub Actions"' >>.config ||
     sed -i 's@\(CONFIG_KERNEL_BUILD_DOMAIN=\).*@\1$"GitHub Actions"@' .config
+    
+echo '修改banner'
+rm -rf package/base-files/files/etc/banner
+cp -f ../banner package/base-files/files/etc/
 
 # add ssr plus+
 git clone https://github.com/fw876/helloworld.git package/helloworld
+# add OpenAppFilter
+git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
+# add serverchan
+git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan

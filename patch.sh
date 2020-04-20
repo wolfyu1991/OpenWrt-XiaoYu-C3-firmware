@@ -44,4 +44,4 @@ cp -f ../banner package/base-files/files/etc/
 # add serverchan
 git clone https://github.com/tty228/luci-app-serverchan package/luci-app-serverchan
 # add luci-theme-argon
-git clone https://github.com/jerrykuku/luci-theme-argon
+# git clone https://github.com/jerrykuku/luci-theme-argon

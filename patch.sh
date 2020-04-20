@@ -38,7 +38,7 @@ rm -rf package/base-files/files/etc/banner
 cp -f ../banner package/base-files/files/etc/
 
 # add ssr plus+
-git clone https://github.com/fw876/helloworld.git package/helloworld
+# git clone https://github.com/fw876/helloworld.git package/helloworld
 # add OpenAppFilter
 # git clone https://github.com/destan19/OpenAppFilter.git package/OpenAppFilter
 # add serverchan
